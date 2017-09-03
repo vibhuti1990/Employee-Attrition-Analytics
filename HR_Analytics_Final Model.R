@@ -13,29 +13,7 @@ suppressMessages(library(ROSE))
 setwd('V:/Summer Semester/Machine Learning A-Z Template Folder/Part 1 - Data Preprocessing')
 ibm_attrition = read.csv('WA_Fn-UseC_-HR-Employee-Attrition.csv')
 #-------------------------------------------------------------------------------
-#Data Vizualization
-#__________________
 
-g1 <- ggplot(ibm_attrition, 
-             aes(x = MonthlyIncome, fill = Attrition)) + 
-             geom_density(alpha = 0.7) + 
-             scale_fill_manual(values = c("#386cb0","#fdb462"))
-g2 <- ggplot(ibm_attrition, 
-             aes(x = HourlyRate, fill = Attrition)) + 
-  geom_density(alpha = 0.7) + 
-  scale_fill_manual(values = c("#386cb0","#fdb462"))
-
-g3 <- ggplot(ibm_attrition, 
-             aes(x = DailyRate, fill = Attrition)) + 
-  geom_density(alpha = 0.7) + 
-  scale_fill_manual(values = c("#386cb0","#fdb462"))
-
-g4 <- ggplot(ibm_attrition, 
-             aes(x = MonthlyRate, fill = Attrition)) + 
-  geom_density(alpha = 0.7) + 
-  scale_fill_manual(values = c("#386cb0","#fdb462"))
-
-grid.arrange(g1, g2, g3, g4, ncol = 2, nrow = 2)
 #-------------------
 #Data Preprocessing
 #-------------------
